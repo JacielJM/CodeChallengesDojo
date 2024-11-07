@@ -44,7 +44,7 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Person(" + name + ", " + birthDate + ")";
+        return "Person(" + name + ", " + Objects.requireNonNullElseGet(birthDate, () -> age) + ")";
     }
 
     public static Set<Person> removeDuplicates(List<Person> persons) {

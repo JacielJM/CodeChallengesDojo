@@ -23,6 +23,7 @@ import java.util.Set;
 import static com.jacieljm.collections.ParenthesesValidator.isValidChain;
 import static com.jacieljm.collections.Person.groupByAge;
 import static com.jacieljm.collections.Person.removeDuplicates;
+import static com.jacieljm.lambdas.PrimeValidator.isPrime;
 
 public class Main {
     public static void main(String[] args) {
@@ -72,6 +73,8 @@ public class Main {
 
         shoppingMall.doPayment("something", 300);
 
+        // Lego
+        System.out.println("\nLego");
         Head head = new Head("Angry");
         Torso torso = new Torso("Red");
         Legs legs = new Legs("Black");
@@ -94,6 +97,7 @@ public class Main {
         System.out.println(expensiveLego.printDescription());
 
         // Collections 1
+        System.out.println("\nCollections 1");
         List<Person> persons = List.of(
                 new Person("Uziel", "15/11/1987"),
                 new Person("Uziel", "15/11/1987"),
@@ -105,6 +109,7 @@ public class Main {
         System.out.println(uniquePersons);
 
         // Collections 2
+        System.out.println("\nCollections 2\n");
         System.out.println(isValidChain("()")); // true
         System.out.println(isValidChain("()[]{}")); // true
         System.out.println(isValidChain("(]")); // false
@@ -112,6 +117,7 @@ public class Main {
         System.out.println(isValidChain("{[]}")); // true
 
         // Collections 3
+        System.out.println("\nCollections 3\n");
         List<Person> personsWithAge = List.of(
                 new Person("Juan", 30),
                 new Person("Alicia", 22),
@@ -121,5 +127,15 @@ public class Main {
 
         Map<Integer, Set<String>> result = groupByAge(personsWithAge);
         System.out.println(result);
+
+        // Lambdas 1
+        System.out.println("\nLambdas 1\n");
+        System.out.println(isPrime.test(5));  // true
+        System.out.println(isPrime.test(10)); // false
+        System.out.println(isPrime.test(13)); // true
+        System.out.println(isPrime.test(1));  // false
+
+        // Lambdas 2
+        System.out.println("\nLambdas 2\n");
     }
 }
